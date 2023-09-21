@@ -1,5 +1,5 @@
 // -----------------------------------Day 1 ----------------------------------------
- 
+
 
 //  1. Print numbers from 1 to 10
 
@@ -58,7 +58,7 @@ for(var i=1; i<=10;i++){
     }
 }
 
-var sum = 0 
+var sum = 0
 
 for (var i = 1; i<=10 ; i++){
     var newsum = sum+=i
@@ -99,7 +99,7 @@ console.log(`10! = ${factorialOf10}`);
 var sum = 0
 for (var i = 11; i<30 ; i++){
     if(i%2 != 0){
-        sum += i 
+        sum += i
     }
 }
 
@@ -109,7 +109,7 @@ function celsiusToFahrenheit(celsius) {
     const fahrenheit = (celsius * 9/5) + 32;
     return fahrenheit;
   }
-  
+
   // Example usage:
   const celsiusTemperature = 25; // Replace with your desired Celsius temperature
   const convertedTemperature = celsiusToFahrenheit(celsiusTemperature);
@@ -120,16 +120,15 @@ function celsiusToFahrenheit(celsius) {
 //  // 8 = Calculate the sum of numbers in an array of numbers
 
 var arr = [2,34,55,35,24,34]
-var sum = 0 
+var sum = 0
 for (let i = 0 ; i<arr.length ; i++){
     sum += arr[i]
 }
 console.log(sum)
 
-
 //  9. Calculate the average of the numbers in an array of numbers
 
-var sum = 0 
+var sum = 0
 var arr = [2,34,55,35,24,34]
 
 for (let i = 0 ; i <arr.length ; i++){
@@ -139,6 +138,73 @@ var average = sum/arr.length
 console.log(average)
 
 
-// 10 = Create a function that receives an array of numbers as argument and returns an array containing only the positive numbers
+// 10 = Create a function that receives an array of numbers as argument
+// and returns an array containing only the positive numbers
 
 
+filterpositivenumbers  = numbers => {
+    const filternumber = numbers.filter(number => number > 0)
+    return filternumber
+}
+let arr = [-3,1,5,0,-6,-33,6,8,4]
+var sortedarr = filterpositivenumbers(arr)
+console.log(sortedarray)
+
+// 11 = Find the maximum number in an array of numbers
+
+findmaximumoutput = array =>{
+    if (array.length === 0) {
+        return undefined
+    }
+    else{
+        return Math.max(...array)
+    }
+}
+const array = [2,5,545,15,2557,2345,11]
+const result = findmaximumoutput(array)
+console.log(result)
+
+// -----------------------------------Day 3 ----------------------------------------
+
+// 12 = Print the first 10 Fibonacci numbers without recursion
+
+//  (1) =  without recursion 
+
+var f0 = 0
+var f1 = 1
+
+for (var i = 2 ; i <= 10 ; i++ ){
+  var fn = f1 + f0
+  f0 = f1 
+  f1 = fn
+}
+console.log(fn)
+
+//  (2) =  using recursion 
+
+function findfibonacci (n){
+  if(n===0){
+    return 0 
+  }
+  if(n===1){
+    return 1 
+  }
+  else{
+    return findfibonacci(n-1) + findfibonacci(n-2) 
+  }
+}
+var Fibonacci = findfibonacci(10)
+console.log(Fibonacci)
+
+
+// 13 = calculate 10!
+
+var prod = 1
+for (var i = 1; i <= 10 ; i++){
+  prod *= i
+}
+console.log(prod)
+  
+
+  
+  
