@@ -205,6 +205,27 @@ for (var i = 1; i <= 10 ; i++){
 }
 console.log(prod)
   
+// 14 = pattern program increment using nested loop
 
   
-  
+for (let i=1 ; i<=5;i++){
+  let pattern = ''
+  for(let j = 1; j<=i ; j++){
+    pattern +="*"
+  }
+  console.log(pattern)
+}
+
+// 15 = pattern program decrement using nested loop
+
+
+for(var i = 1; i<=5;i++){
+  let pattern =''
+  for(var j = 1; j<=i; j++){
+    pattern += '^'
+  }
+  console.log(pattern)
+}
+
+
+
